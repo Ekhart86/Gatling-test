@@ -34,8 +34,9 @@ class BasicSimulation extends Simulation {
   val scn = scenario("BasicSimulation")
     .exec(
       http("GETRequest")
-        .get("http://bar.com/foo.php")
-        .check(status.is(403))
+        .get("http://istqb-training.ru/")
+        .check(status.is(200))
+        .check(substring("Григорий Гриб"))
     )
 
 
